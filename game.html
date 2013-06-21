@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+  <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script type="text/javascript" src="inc/jquery.mb.audio.js"></script>
+  <script type="text/javascript" src="game.js">
+  </script>
+  
+</head>
+<body>
+  
+  <div id="start">
+    <div class="row">
+      <div class="span5 offset1">
+      <button  class="btn"  onclick="$(document).trigger('initAudio')">Let's start</button>
+  </div>
+    </div>
+      </div>
+
+
+  <div id="loading" style="display: none;">
+  <div class="row">
+    <div class="span5 offset1">
+     <h3>... loading ...</h3>
+    </div>
+      </div>
+    </div>
+
+  <div id="buttons" style="display: none;">
+
+  <br />
+  
+
+  
+      <h3>MYSTERY IDENTITY PHONE GAME</h3>
+
+
+  <input type="text" class="custom2" name="enter" value="" id="number"/>
+
+  
+<div class="ui-grid-b">
+  <div class="ui-block-a">
+
+      <button data-corners="false" OnClick="document.getElementById('number').value+='1'">1</button>
+      <button data-corners="false" OnClick="document.getElementById('number').value+='4'">4</button>
+      <button data-corners="false" OnClick="document.getElementById('number').value+='7'">7</button>
+      <button data-corners="false" OnClick="document.getElementById('number').value+='G'">G</button>
+
+    </div>
+    <div class="ui-block-b">
+  
+    <button data-corners="false" OnClick="document.getElementById('number').value+='2'">2</button>
+    <button data-corners="false" OnClick="document.getElementById('number').value+='5'">5</button>
+    <button data-corners="false" OnClick="document.getElementById('number').value+='8'">8</button>
+    <button data-corners="false" OnClick="document.getElementById('number').value+='0'">0</button>
+
+  </div>
+  <div class="ui-block-c">
+
+
+    <button data-corners="false" OnClick="document.getElementById('number').value+='3'">3</button>
+    <button data-corners="false" OnClick="document.getElementById('number').value+='6'">6</button>
+    <button data-corners="false" OnClick="document.getElementById('number').value+='9'">9</button>
+ <button data-corners="false" OnClick="document.getElementById('number').value+='S'">S</button>
+  </div>
+</div>
+
+      
+      
+      
+
+
+
+
+  <a href="#popupDialog" data-rel="popup" data-role="button" data-position-to="window" class="btn custom" OnClick="call()">Call</a>
+  <button data-corners="false" OnClick="clearNumber()">Clear Number</button>
+  <button data-corners="false" OnClick="newGame()">New Game</button>
+  <div data-role="popup" id="popupDialog" data-overlay-theme="a" data-theme="c" style="max-width:400px;" class="ui-corner-all">
+  			
+  			<div data-role="content" data-theme="" class="ui-corner-bottom ui-content">
+  				<h3 class="ui-title">You've received a message!</h3>
+  				<p id="message"></p>
+  				
+  				<a href="#" data-role="button" data-inline="true" data-rel="back" data-transition="flow" data-theme="b"  OnClick="document.getElementById('number').value='';">Mark As Read</a>  
+  			</div>
+  		</div>
+</body>
+</html>
